@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import Home from "./routing/home";
 import About from "./routing/about";
 import ContactUs from "./routing/contactUs";
@@ -18,7 +18,7 @@ import Counter from "./routing/counter";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Navigate replace to="/login" />} />
@@ -42,28 +42,6 @@ export default function App() {
         {/* Wildcard route */}
         <Route path="*" element={<NoPageFound />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
-
-// HW1
-// Add tabs for-
-// Hooks
-// types of Component
-// conditional comp
-// lifecycle
-
-// HW2
-// adding the login page
-
-// Hw3-
-// take nested AOO and interate over it via map
-
-// HW4-
-// scrollable SPA
-
-// HW5-
-// bootstrap table with edit and delete and routing to that page
-
-// HW6
-// add a counter with + and - buttons
